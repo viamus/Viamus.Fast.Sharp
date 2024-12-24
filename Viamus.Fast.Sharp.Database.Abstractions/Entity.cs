@@ -28,8 +28,14 @@ public abstract class Entity
         CreatedAt = DateTime.UtcNow;
     }
 
-    public void SetUpdatedAt()
+    public void Update()
     {
+        UpdatedAt = DateTime.UtcNow;
+    }
+    
+    public void Delete()
+    {
+        Deleted = true;
         UpdatedAt = DateTime.UtcNow;
     }
 }
