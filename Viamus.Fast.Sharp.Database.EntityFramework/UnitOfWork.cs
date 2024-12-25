@@ -4,9 +4,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Viamus.Fast.Sharp.Database.Abstractions;
-using Viamus.Fast.Sharp.Database.Postgresql.Factories;
+using Viamus.Fast.Sharp.Database.EntityFramework.Factories;
 
-namespace Viamus.Fast.Sharp.Database.Postgresql;
+namespace Viamus.Fast.Sharp.Database.EntityFramework;
 
 public class UnitOfWork : IUnitOfWork, IAsyncDisposable
 {
@@ -24,7 +24,6 @@ public class UnitOfWork : IUnitOfWork, IAsyncDisposable
     {
         return _repositoryFactory.Get<TEntity>(_context);
     }
-    
 
     public Task CommitAsync(CancellationToken cancellationToken = default) =>
         Task.FromResult(_context.SaveChangesAsync(cancellationToken));

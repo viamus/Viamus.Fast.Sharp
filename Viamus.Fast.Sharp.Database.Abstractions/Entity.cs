@@ -12,9 +12,7 @@ public abstract class Entity
     public DateTime? UpdatedAt { get; protected set; }
 
     public bool Deleted { get; protected set; }
-
-    public Guid ConcurrentFlag { get; protected set; } = Guid.NewGuid();
-
+    
     protected Entity()
     {
         Id = Guid.CreateVersion7();

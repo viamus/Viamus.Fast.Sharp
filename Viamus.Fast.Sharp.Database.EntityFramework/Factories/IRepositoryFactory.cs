@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Viamus.Fast.Sharp.Database.Abstractions;
 
-namespace Viamus.Fast.Sharp.Database.Postgresql.Factories;
+namespace Viamus.Fast.Sharp.Database.EntityFramework.Factories;
 
 public interface IRepositoryFactory: IAsyncDisposable
 {

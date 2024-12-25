@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
+﻿using System.Diagnostics.CodeAnalysis;
 using System.Linq.Expressions;
-using System.Threading;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Viamus.Fast.Sharp.Database.Abstractions;
 
-namespace Viamus.Fast.Sharp.Database.Postgresql;
+namespace Viamus.Fast.Sharp.Database.EntityFramework;
 
 public class Repository<TEntity> : IRepository<TEntity>
     where TEntity : Entity
