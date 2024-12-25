@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
 using Viamus.Fast.Sharp.Database.Abstractions;
 
 namespace Viamus.Fast.Sharp.Database.Postgresql.Factories;
