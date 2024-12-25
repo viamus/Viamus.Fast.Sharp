@@ -5,7 +5,7 @@ namespace Viamus.Fast.Sharp.Database.Abstractions;
 /// <summary>
 /// Interface <c>Entity IRepository</c> Generic IRepository pattern construction
 /// </summary>
-public interface IRepository<TEntity> : IDisposable where TEntity : Entity
+public interface IRepository<TEntity> :  IAsyncDisposable where TEntity : Entity
 {
     /// <summary>
     /// This method adds a new entity to the tracking context
@@ -45,15 +45,11 @@ public interface IRepository<TEntity> : IDisposable where TEntity : Entity
     /// <param name="cancellationToken">Cancellation Token, default is none</param>
     /// <param name="includes">Expression of includes</param>
     /// <returns>Entity IList</returns>
-    Task<IList<TEntity>> GetAsync(Expression<Func<TEntity, bool>>? filter = null,
+    Task<IList<TEntity>> GetAsync
+    (
+        Expression<Func<TEntity, bool>>? filter = null,
         Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null,
         CancellationToken cancellationToken = default,
         params Expression<Func<TEntity, object>>[] includes
     );
-
-    /// <summary>
-    /// Save all tracked entities to the database
-    /// </summary>
-    /// <param name="cancellationToken">Cancellation Token, default is none</param>
-    Task SaveAsync(CancellationToken cancellationToken = default);
 }

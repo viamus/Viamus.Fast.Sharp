@@ -1,4 +1,5 @@
-﻿using System.Linq.Expressions;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using Viamus.Fast.Sharp.Database.Abstractions;
 
@@ -9,10 +10,8 @@ public class Repository<TEntity> : IRepository<TEntity>
 {
     private readonly DbSet<TEntity> _dbSet;
     private readonly DbContext _context;
-
-    private bool _disposed = false;
-
-    // ReSharper disable once ConvertToPrimaryConstructor
+    
+    [SuppressMessage("ReSharper", "ConvertToPrimaryConstructor")]
     public Repository(DbContext context)
     {
         _context = context;
@@ -46,8 +45,9 @@ public class Repository<TEntity> : IRepository<TEntity>
     public Task<TEntity?> GetAsync(Guid id, CancellationToken cancellationToken = default) =>
         _dbSet.FirstOrDefaultAsync(e => e.Id == id, cancellationToken);
 
-
-    public async Task<IList<TEntity>> GetAsync(Expression<Func<TEntity, bool>>? filter = null,
+    public async Task<IList<TEntity>> GetAsync
+    (
+        Expression<Func<TEntity, bool>>? filter = null,
         Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null,
         CancellationToken cancellationToken = default,
         params Expression<Func<TEntity, object>>[]? includes
@@ -76,26 +76,10 @@ public class Repository<TEntity> : IRepository<TEntity>
 
         return await query.ToListAsync(cancellationToken);
     }
-
-    public Task SaveAsync(CancellationToken cancellationToken = default) =>
-        Task.FromResult(_context.SaveChangesAsync(cancellationToken));
-
-    protected virtual void Dispose(bool disposing)
+    
+    public async ValueTask DisposeAsync()
     {
-        if (!this._disposed)
-        {
-            if (disposing)
-            {
-                _context.Dispose();
-            }
-        }
-
-        this._disposed = true;
-    }
-
-    public void Dispose()
-    {
-        Dispose(true);
+        await _context.DisposeAsync().ConfigureAwait(false);
         GC.SuppressFinalize(this);
     }
 }
