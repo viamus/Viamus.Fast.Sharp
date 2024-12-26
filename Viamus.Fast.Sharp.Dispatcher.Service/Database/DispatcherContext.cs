@@ -6,7 +6,7 @@ namespace Viamus.Fast.Sharp.Dispatcher.Service.Database;
 
 public class DispatcherContext(DbContextOptions<DispatcherContext> options) : DbContext(options)
 {
-    public DbSet<Tenancy> Tenancies { get; set; }
+    public DbSet<Tenancy> Tenancies { get; init; }
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
