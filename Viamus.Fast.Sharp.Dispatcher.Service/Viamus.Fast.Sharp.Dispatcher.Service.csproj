@@ -14,5 +14,6 @@
     <ItemGroup>
       <ProjectReference Include="..\Viamus.Fast.Sharp.Database.EntityFramework\Viamus.Fast.Sharp.Database.EntityFramework.csproj" />
     </ItemGroup>
+    
 
 </Project>
