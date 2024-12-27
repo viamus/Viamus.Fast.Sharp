@@ -1,6 +1,4 @@
-@Viamus.Fast.Sharp.Dispatcher.Service_HostAddress = http://localhost:5102
-
-GET {{Viamus.Fast.Sharp.Dispatcher.Service_HostAddress}}/weatherforecast/
+GET {{host}}/health
 Accept: application/json
 
 ###

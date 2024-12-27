@@ -10,10 +10,12 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddDatabases(this IServiceCollection services, IConfiguration configuration)
     {
+        ArgumentNullException.ThrowIfNull(configuration.GetConnectionString("DefaultConnection"));
+        
         services.AddDbContextPool<DispatcherContext>(opt =>
             opt.UseNpgsql
             (
-                configuration.GetConnectionString("DefaultConnection"),
+                configuration.GetConnectionString("DefaultConnection")!,
                 o => o
                     .EnableRetryOnFailure(3, TimeSpan.FromMilliseconds(100), null)
             ));
@@ -23,6 +25,16 @@ public static class DependencyInjection
             var dbContext = builder.GetService<DispatcherContext>();
             return new UnitOfWork(dbContext!, new RepositoryFactory());
         });
+
+        return services;
+    }
+
+    public static IServiceCollection AddHealthChecks(this IServiceCollection services, IConfiguration configuration)
+    {
+        ArgumentNullException.ThrowIfNull(configuration.GetConnectionString("DefaultConnection"));
+        
+        services.AddHealthChecks()
+                .AddNpgSql(configuration.GetConnectionString("DefaultConnection")!);
 
         return services;
     }
