@@ -1,4 +1,6 @@
 GET {{host}}/health
 Accept: application/json
-
 ###
+
+GET {{host}}/api/tenancies/bb2d8e60-792b-409e-bdf2-fa75f90b2e9c
+Accept: application/json

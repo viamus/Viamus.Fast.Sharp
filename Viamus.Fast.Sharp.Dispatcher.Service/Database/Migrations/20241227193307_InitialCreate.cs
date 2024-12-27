@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Viamus.Fast.Sharp.Dispatcher.Service.Migrations
+namespace Viamus.Fast.Sharp.Dispatcher.Service.Database.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration

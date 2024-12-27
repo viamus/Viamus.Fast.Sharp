@@ -3,10 +3,8 @@ using Viamus.Fast.Sharp.Database.Abstractions;
 
 namespace Viamus.Fast.Sharp.Dispatcher.Service.Database.Entities;
 
-[SuppressMessage("ReSharper", "PropertyCanBeMadeInitOnly.Global")]
 public class Tenancy : Entity
 {
-    [SuppressMessage("ReSharper", "ConvertToPrimaryConstructor")]
     public Tenancy(string name, string? description)
     {
         Name = name;

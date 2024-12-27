@@ -2,21 +2,18 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Viamus.Fast.Sharp.Dispatcher.Service.Database;
 
 #nullable disable
 
-namespace Viamus.Fast.Sharp.Dispatcher.Service.Migrations
+namespace Viamus.Fast.Sharp.Dispatcher.Service.Database.Migrations
 {
     [DbContext(typeof(DispatcherContext))]
-    [Migration("20241227193307_InitialCreate")]
-    partial class InitialCreate
+    partial class DispatcherContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

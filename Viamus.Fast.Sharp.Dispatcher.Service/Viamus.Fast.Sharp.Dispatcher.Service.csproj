@@ -18,10 +18,6 @@
     <ItemGroup>
       <ProjectReference Include="..\Viamus.Fast.Sharp.Database.EntityFramework\Viamus.Fast.Sharp.Database.EntityFramework.csproj" />
     </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Endpoints\" />
-    </ItemGroup>
     
 
 </Project>
