@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddOpenApi()
     .AddDatabases(builder.Configuration)
+    .AddHybridCaching(builder.Configuration)
     .AddHandlers()
     .AddHealthChecks(builder.Configuration);
 
