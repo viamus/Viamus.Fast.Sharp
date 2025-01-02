@@ -4,7 +4,7 @@ using Viamus.Fast.Sharp.Database.Abstractions;
 using Viamus.Fast.Sharp.Database.EntityFramework;
 using Viamus.Fast.Sharp.Database.EntityFramework.Factories;
 
-namespace Viamus.Fast.Sharp.Dispatcher.Service.Database;
+namespace Viamus.Fast.Sharp.Dispatcher.Public.Infrastructure.Database;
 
 public class RepositoryFactory: IRepositoryFactory
 {

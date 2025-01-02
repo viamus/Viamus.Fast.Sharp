@@ -1,14 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Viamus.Fast.Sharp.Dispatcher.Service.Database.Entities;
+using Viamus.Fast.Sharp.Dispatcher.Public.Domain.Entities;
 
-namespace Viamus.Fast.Sharp.Dispatcher.Service.Database.Mapping;
+namespace Viamus.Fast.Sharp.Dispatcher.Public.Infrastructure.Database.Mapping;
 
-public class TenancyMapping : IEntityTypeConfiguration<Tenancy>
+public class HostingMapping : IEntityTypeConfiguration<Hosting>
 {
-    public void Configure(EntityTypeBuilder<Tenancy> builder)
+    public void Configure(EntityTypeBuilder<Hosting> builder)
     {
-        builder.ToTable("tenancies");
+        builder.ToTable("hosting");
 
         builder.HasKey(p => p.Id);
         

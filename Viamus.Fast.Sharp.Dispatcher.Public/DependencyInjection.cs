@@ -5,12 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using Viamus.Fast.Sharp.Database.Abstractions;
 using Viamus.Fast.Sharp.Database.EntityFramework;
 using Viamus.Fast.Sharp.Database.EntityFramework.Factories;
-using Viamus.Fast.Sharp.Dispatcher.Service.Database;
-using Viamus.Fast.Sharp.Dispatcher.Service.Handlers.Shared;
-using Viamus.Fast.Sharp.Dispatcher.Service.Handlers.Tenancy;
-using Viamus.Fast.Sharp.Dispatcher.Service.Handlers.Tenancy.Interfaces;
+using Viamus.Fast.Sharp.Dispatcher.Public.Infrastructure.Database;
 
-namespace Viamus.Fast.Sharp.Dispatcher.Service;
+namespace Viamus.Fast.Sharp.Dispatcher.Public;
 
 public static class DependencyInjection
 {
@@ -45,7 +42,7 @@ public static class DependencyInjection
     
     public static IServiceCollection AddHandlers(this IServiceCollection services)
     {
-        services.AddScoped<ITenancyHandler, TenancyHandler>();
+        
 
         return services;
     }

@@ -4,11 +4,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CFD64245-870
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F2FAC526-0CAA-4A4F-9BA5-04F0079AE4A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viamus.Fast.Sharp.Dispatcher.Service", "Viamus.Fast.Sharp.Dispatcher.Service\Viamus.Fast.Sharp.Dispatcher.Service.csproj", "{75BF8FAD-08CA-47ED-945C-35170CEE0479}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viamus.Fast.Sharp.Dispatcher.Public", "Viamus.Fast.Sharp.Dispatcher.Public\Viamus.Fast.Sharp.Dispatcher.Public.csproj", "{75BF8FAD-08CA-47ED-945C-35170CEE0479}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viamus.Fast.Sharp.Database.EntityFramework", "Viamus.Fast.Sharp.Database.EntityFramework\Viamus.Fast.Sharp.Database.EntityFramework.csproj", "{79FB9807-D8BB-4CDA-9AB6-846E23AB8233}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viamus.Fast.Sharp.Database.Abstractions", "Viamus.Fast.Sharp.Database.Abstractions\Viamus.Fast.Sharp.Database.Abstractions.csproj", "{96AED383-87F8-440B-82FD-6088128585EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{511DD130-CB53-4670-95FD-7BFC79987D05}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dispatcher", "Dispatcher", "{A15080BD-61DA-4C8F-87F2-42787FB36983}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,9 +20,11 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{75BF8FAD-08CA-47ED-945C-35170CEE0479} = {CFD64245-870E-47C7-B90C-0048A3627672}
-		{79FB9807-D8BB-4CDA-9AB6-846E23AB8233} = {CFD64245-870E-47C7-B90C-0048A3627672}
-		{96AED383-87F8-440B-82FD-6088128585EC} = {CFD64245-870E-47C7-B90C-0048A3627672}
+		{511DD130-CB53-4670-95FD-7BFC79987D05} = {CFD64245-870E-47C7-B90C-0048A3627672}
+		{96AED383-87F8-440B-82FD-6088128585EC} = {511DD130-CB53-4670-95FD-7BFC79987D05}
+		{79FB9807-D8BB-4CDA-9AB6-846E23AB8233} = {511DD130-CB53-4670-95FD-7BFC79987D05}
+		{A15080BD-61DA-4C8F-87F2-42787FB36983} = {CFD64245-870E-47C7-B90C-0048A3627672}
+		{75BF8FAD-08CA-47ED-945C-35170CEE0479} = {A15080BD-61DA-4C8F-87F2-42787FB36983}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{75BF8FAD-08CA-47ED-945C-35170CEE0479}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
