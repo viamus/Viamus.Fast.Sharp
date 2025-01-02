@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{511DD1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dispatcher", "Dispatcher", "{A15080BD-61DA-4C8F-87F2-42787FB36983}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Viamus.Fast.Sharp.Dispatcher.Viewer", "Viamus.Fast.Sharp.Dispatcher.Viewer\Viamus.Fast.Sharp.Dispatcher.Viewer.csproj", "{98BB85C8-032A-411D-BD53-C4D11CA693E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,7 @@ Global
 		{79FB9807-D8BB-4CDA-9AB6-846E23AB8233} = {511DD130-CB53-4670-95FD-7BFC79987D05}
 		{A15080BD-61DA-4C8F-87F2-42787FB36983} = {CFD64245-870E-47C7-B90C-0048A3627672}
 		{75BF8FAD-08CA-47ED-945C-35170CEE0479} = {A15080BD-61DA-4C8F-87F2-42787FB36983}
+		{98BB85C8-032A-411D-BD53-C4D11CA693E9} = {A15080BD-61DA-4C8F-87F2-42787FB36983}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{75BF8FAD-08CA-47ED-945C-35170CEE0479}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -39,5 +42,9 @@ Global
 		{96AED383-87F8-440B-82FD-6088128585EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96AED383-87F8-440B-82FD-6088128585EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96AED383-87F8-440B-82FD-6088128585EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98BB85C8-032A-411D-BD53-C4D11CA693E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98BB85C8-032A-411D-BD53-C4D11CA693E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98BB85C8-032A-411D-BD53-C4D11CA693E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98BB85C8-032A-411D-BD53-C4D11CA693E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
